@@ -1,4 +1,4 @@
-import 'package:edu_connect/screens/login_screen.dart';
+import 'package:edu_connect/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class EduConnect extends StatefulWidget {
