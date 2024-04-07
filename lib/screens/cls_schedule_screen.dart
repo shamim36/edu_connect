@@ -34,7 +34,7 @@ class _ClsScheduleScreenState extends State<ClsScheduleScreen> {
           padding: const EdgeInsets.all(16),
           child: Center(
             child: ClipRRect(
-              borderRadius: const BorderRadius.only(topLeft: const Radius.circular(14),topRight: Radius.circular(14),),
+              borderRadius: const BorderRadius.only(topLeft: Radius.circular(14),topRight: Radius.circular(14),),
               child: Column(
                 children: [
                   Container(
