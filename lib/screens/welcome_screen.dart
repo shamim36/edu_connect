@@ -1,5 +1,6 @@
 import 'package:edu_connect/helper/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -15,7 +16,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     double deviceWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+      backgroundColor: const Color.fromRGBO(242, 248, 252, 1),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +30,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 SizedBox(
                   height: deviceHeight * 0.2,
                   width: deviceWidth * 0.4,
-                  child: Image.asset('assets/images/logo.png'),
+                  child: SvgPicture.asset(
+                    'assets/images/logo.svg',
+                  ),
                 ),
               ],
             ),
@@ -38,8 +41,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               children: [
                 SizedBox(
                   height: deviceHeight * 0.3,
-                  width: deviceWidth * 0.8,
-                  child: Image.asset('assets/images/home_screen.png'),
+                  width: deviceWidth * 0.78,
+                  child: Image.asset(
+                    'assets/images/home_screen.png',
+                  ),
                 ),
               ],
             ),
@@ -58,7 +63,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             CustomButton(
               backgroundColor: Colors.white,
-              foregroundColor: Colors.black,
+              foregroundColor: const Color.fromRGBO(65, 64, 66, 1),
               deviceHeight: deviceHeight * 0.075,
               deviceWidth: deviceWidth * 0.78,
               label: 'Login',
@@ -69,7 +74,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             CustomButton(
               backgroundColor: const Color.fromRGBO(117, 231, 182, 1),
-              foregroundColor: Colors.white,
+              foregroundColor: const Color.fromRGBO(255, 255, 255, 1),
               deviceHeight: deviceHeight * 0.075,
               deviceWidth: deviceWidth * 0.78,
               label: 'Signup',
@@ -81,4 +86,3 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 }
-
