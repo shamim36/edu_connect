@@ -15,12 +15,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     double deviceWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+      backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               height: deviceHeight * .06,
@@ -84,44 +82,3 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   }
 }
 
-// class customButton extends StatelessWidget {
-//   const customButton({
-//     super.key,
-//     required this.label,
-//     required this.deviceWidth,
-//     required this.deviceHeight,
-//   });
-
-//   final String label;
-//   final double deviceWidth;
-//   final double deviceHeight;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return ElevatedButton(
-//       onPressed: () {},
-//       style: ButtonStyle(
-//         foregroundColor: MaterialStateProperty.all<Color>(
-//           Colors.black,
-//         ),
-//         backgroundColor: MaterialStateProperty.all<Color>(
-//           Color.fromRGBO(255, 255, 255, 1),
-//         ),
-//         minimumSize: MaterialStateProperty.all<Size>(
-//           Size(
-//             deviceWidth * 0.7,
-//             deviceHeight * 0.07,
-//           ),
-//         ),
-//         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-//           RoundedRectangleBorder(
-//             borderRadius: BorderRadius.circular(
-//               10.0,
-//             ),
-//           ),
-//         ),
-//       ),
-//       child: Text('Login'),
-//     );
-//   }
-// }
