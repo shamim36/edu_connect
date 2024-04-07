@@ -11,8 +11,8 @@ class EduConnect extends StatefulWidget {
 class _EduConnectState extends State<EduConnect> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      color: Color.fromRGBO(255, 255, 255, 1),
+    return const MaterialApp(
+      color: Color.fromRGBO(242, 248, 252, 1),
       debugShowCheckedModeBanner: false,
       home: WelcomeScreen(),
     );

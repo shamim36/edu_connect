@@ -1,4 +1,6 @@
 import 'package:edu_connect/helper/custom_button.dart';
+import 'package:edu_connect/screens/login_screen.dart';
+import 'package:edu_connect/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -67,7 +69,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               deviceHeight: deviceHeight * 0.075,
               deviceWidth: deviceWidth * 0.78,
               label: 'Login',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginScreen(),
+                  ),
+                );
+              },
             ),
             SizedBox(
               height: deviceHeight * .03,
@@ -78,7 +87,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               deviceHeight: deviceHeight * 0.075,
               deviceWidth: deviceWidth * 0.78,
               label: 'Signup',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SignUpScreen(),
+                  ),
+                );
+              },
             ),
           ],
         ),
