@@ -1,5 +1,4 @@
-import 'package:edu_connect/screens/cls_schedule_screen.dart';
-import 'package:edu_connect/screens/welcome_screen.dart';
+import 'package:edu_connect/screens/cls_Timing_screen.dart';
 import 'package:flutter/material.dart';
 
 class EduConnect extends StatefulWidget {
@@ -15,7 +14,7 @@ class _EduConnectState extends State<EduConnect> {
     return const MaterialApp(
       color: Color.fromRGBO(242, 248, 252, 1),
       debugShowCheckedModeBanner: false,
-      home: ClsScheduleScreen(),
+      home: ClsTimingScreen(),
     );
   }
 }

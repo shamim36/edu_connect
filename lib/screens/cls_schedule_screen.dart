@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ClsScheduleScreen extends StatefulWidget {
   const ClsScheduleScreen({super.key});
@@ -16,28 +15,31 @@ class _ClsScheduleScreenState extends State<ClsScheduleScreen> {
     double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: const Color.fromRGBO(242, 248, 252, 1),
-      appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(242, 248, 252, 1),
-        centerTitle: true,
-        toolbarHeight: 80,
-        automaticallyImplyLeading: false,
-        title: const Text(
-          'Class Schedule',
-          style: TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Center(
-            child: ClipRRect(
-              borderRadius: const BorderRadius.only(topLeft: Radius.circular(14),topRight: Radius.circular(14),),
-              child: Column(
-                children: [
-                  Container(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: deviceHeight * 0.05,
+                ),
+                const Text(
+                  'Class Schedule',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  height: deviceHeight * 0.01,
+                ),
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(14),
+                    topRight: Radius.circular(14),
+                  ),
+                  child: Container(
                     height: deviceHeight * 0.075,
                     color: const Color.fromRGBO(74, 207, 150, 1),
                     child: const Row(
@@ -57,7 +59,6 @@ class _ClsScheduleScreenState extends State<ClsScheduleScreen> {
                                 fontWeight: FontWeight.w800,
                               ),
                             ),
-                          
                             Text(
                               'Tues, 20/02/24',
                               style: TextStyle(
@@ -74,58 +75,147 @@ class _ClsScheduleScreenState extends State<ClsScheduleScreen> {
                       ],
                     ),
                   ),
-                  
-                  Table(
-                    border: TableBorder.all(color: Colors.green),
-                    children: [
-                      TableRow(
-                        children: [
-                          addColumnTitle(label: 'Sub.'),
-                          addColumnTitle(label: 'Batch'),
-                          addColumnTitle(label: 'Class'),
-                          addColumnTitle(label: 'Days'),
-                          addColumnTitle(label: 'Timing'),
-                          addColumnTitle(label: 'Room'),
-                        ],
-                      ),
-                      TableRow(
-                        children: [
-                          addCelltoEachColumn(data: 'Chem'),
-                          addCelltoEachColumn(data: '2'),
-                          addCelltoEachColumn(data: '8'),
-                          addNested2CelltoEachRow(day1: 'SUN', day2: 'TUES'),
-                          addCelltoEachColumn(data: '10-11:30 AM'),
-                          addCelltoEachColumn(data: '101'),
-                        ],
-                      ),
-                      TableRow(
-                        children: [
-                          addCelltoEachColumn(data: 'Phy'),
-                          addCelltoEachColumn(data: '2'),
-                          addCelltoEachColumn(data: '10'),
-                          addNested2CelltoEachRow(day1: 'SUN', day2: 'TUES'),
-                          addCelltoEachColumn(data: '11:30-1 PM'),
-                          addCelltoEachColumn(data: '234'),
-                        ],
-                      ),
-                      TableRow(
-                        children: [
-                          addCelltoEachColumn(data: 'H.Maths'),
-                          addCelltoEachColumn(data: '3'),
-                          addCelltoEachColumn(data: '10'),
-                          addNested2CelltoEachRow(day1: 'MON', day2: 'WED'),
-                          addCelltoEachColumn(data: '10-11:30 AM'),
-                          addCelltoEachColumn(data: '157'),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+                ),
+                Table(
+                  border: TableBorder.all(color: Colors.green),
+                  children: [
+                    TableRow(
+                      children: [
+                        addColumnTitle(label: 'Sub.'),
+                        addColumnTitle(label: 'Batch'),
+                        addColumnTitle(label: 'Class'),
+                        addColumnTitle(label: 'Days'),
+                        addColumnTitle(label: 'Timing'),
+                        addColumnTitle(label: 'Room'),
+                      ],
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                    addRow(
+                      sub: 'Chem',
+                      batch: '2',
+                      cls: '8',
+                      day1: 'SUN',
+                      day2: 'TUES',
+                      timing: '10-11:30AM',
+                      room: '101',
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),
       ),
+    );
+  }
+
+  TableRow addRow({
+    required String sub,
+    required String batch,
+    required String cls,
+    required String day1,
+    required String day2,
+    required String timing,
+    required String room,
+  }) {
+    return TableRow(
+      children: [
+        addCelltoEachColumn(data: sub),
+        addCelltoEachColumn(data: batch),
+        addCelltoEachColumn(data: cls),
+        addNested2CelltoEachRow(day1: day1, day2: day2),
+        addCelltoEachColumn(data: timing),
+        addCelltoEachColumn(data: room),
+      ],
     );
   }
 
